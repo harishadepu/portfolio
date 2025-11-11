@@ -5,6 +5,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
+import recipe from './assets/Screenshot 2025-11-11 140408.png'
 
 const App = () => {
   const projectList = [
@@ -54,7 +55,7 @@ const App = () => {
     id: '11',
     projectTitle: 'Food Recipe search Application',
     description: 'This application helps users to search various food recipes based on ingredients provided by the user.',
-    imageUrl: 'https://assets.ccbp.in/frontend/react-js/projects-r2-img.png',
+    imageUrl: recipe,
 
     projectUrl: 'https://food-recipe-0df0.onrender.com',
   },
@@ -109,8 +110,9 @@ const App = () => {
   },
 ]
   return (
-    <div className='bg-gray-700 min-h-screen'>
+    <div className='bg-gray-700 min-h-screen flex flex-col'>
       <Navbar/>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/skills' element={<Skills/>}/>
@@ -119,6 +121,7 @@ const App = () => {
       
       
       </Routes>
+      </div>
     </div>
     
   )

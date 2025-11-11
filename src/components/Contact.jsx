@@ -15,7 +15,7 @@ const Contact = () => {
       }
     }
   return (
-    <div className="flex flex-col justify-around min-h-screen items-center" id="contact">
+    <div className="text-center flex flex-col items-center justify-center container mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-20">
         <div className="grid grid-cols-2">
             <div className="flex flex-col justify-center items-center p-5 gap-4 w-full">
                 <h2 className='text-4xl font-bold text-blue-500'>Contact <span className='text-blue-500'>Me</span></h2>
