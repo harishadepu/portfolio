@@ -1,54 +1,46 @@
-import React from 'react'
-import profile from '../assets/harish_image.png'
-import resume from '../assets/harishresume_new.pdf'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import profile from '../assets/harish_image.png';
+import resume from '../assets/harishresume_new.pdf';
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-20">
-  <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+    <section id="home" className="scroll-mt-24 container mx-auto px-4 sm:px-6 lg:px-8 py-20 flex justify-center items-center min-h-screen">
+    <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-16">
     
     {/* Text Section */}
-    <div className="mt-10 lg:mt-0 max-w-2xl text-center lg:text-left">
-      <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+    <div className="flex-1 text-center lg:text-left max-w-xl">
+      <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
         Hello, it's me <span className="text-blue-500">Harish Adepu</span>
       </h1>
       <h2 className="text-gray-200 mt-2 text-lg sm:text-xl font-semibold">Full-stack Developer</h2>
-      <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-400">
-        I am a full-stack developer with a <span className="text-white font-medium">MERN stack</span> skill set. Proficient in Python,
-        SQLite, MySQL, HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS. I have developed web applications,
-        troubleshooted coding issues, and managed databases. I am recognized for my strong problem-solving mindset,
-        persistence, and dedication to continuous learning. I am eager to contribute my skills and enthusiasm to a
-        dynamic team and make a meaningful impact.
+      <p className="mt-4 text-base md:text-lg text-gray-400">
+        I am a full-stack developer with a <span className="text-white font-medium">MERN stack</span> skill set...
       </p>
 
-      <div className="text-white flex flex-wrap gap-4 mt-6 justify-center lg:justify-start">
-        <a
-          href={resume}
-          download
-          className="text-base sm:text-lg border px-6 py-3 rounded-xl transition hover:scale-105 hover:underline"
-        >
+      <div className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start">
+        <a href={resume} download className="border px-6 py-3 rounded-xl hover:bg-blue-500 hover:text-white transition">
           Download Resume
         </a>
-        <Link to="/contact">
-          <button className="text-base sm:text-lg border px-6 py-3 rounded-xl transition hover:scale-105 hover:underline">
+        <a href="/contact">
+          <button className="border px-6 py-3 rounded-xl hover:bg-blue-500 hover:text-white transition">
             Contact Me
           </button>
-        </Link>
+        </a>
       </div>
     </div>
 
     {/* Image Section */}
-    <div className="mb-8 lg:mb-0">
+    <div className="flex-shrink-0">
       <img
         src={profile}
-        alt="Portrait of Harish Adepu"
-        className="h-64 w-64 sm:h-72 sm:w-72 lg:h-[300px] lg:w-[300px] object-cover rounded-full shadow-lg"
+        alt="Portrait of Harish Adepu, Full-stack Developer"
+        loading="lazy"
+        className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
       />
     </div>
   </div>
-</div>
-  )
-}
+</section>
+  );
+};
 
-export default Home
+export default Home;

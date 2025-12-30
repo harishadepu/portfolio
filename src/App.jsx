@@ -1,11 +1,12 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
 import recipe from './assets/Screenshot 2025-11-11 140408.png'
+import ecom from './assets/Screenshot 2025-12-30 164835.png'
+import blog from './assets/Screenshot 2025-12-30 165739.png'
 
 const App = () => {
   const projectList = [
@@ -32,18 +33,19 @@ const App = () => {
     projectTitle: 'e-commerce',
     description:
       'this is used to buy products online and sell products online.',
-    imageUrl: 'https://i.ibb.co/JRm22Rrw/Screenshot-2025-07-16-160207.png',
-    projectUrl: 'https://chat-app-2-a0dt.onrender.com',
+    imageUrl: ecom,
+    projectUrl: 'https://e-commerce-fornt.onrender.com/',
   },
   {
     id: '4',
     categoryId: 'PROJECT',
-    projectTitle: 'Portfolio',
+    projectTitle: 'Blog app',
     description:
-      'this is tell us about me.',
-    imageUrl: 'https://i.ibb.co/hFSDr7FY/Screenshot-2025-10-13-191613.png',
-    projectUrl: 'https://portfolio-front-3zn0.onrender.com',
-  },{
+      'this is used to write blogs and read blogs online.',
+    imageUrl: blog,
+    projectUrl: 'https://blog-app-seven-blue.vercel.app/',
+  },
+  ,{
     id: '5',
     projectTitle: 'Tourism Website',
     description:
@@ -113,14 +115,10 @@ const App = () => {
     <div className='bg-gray-700 min-h-screen flex flex-col'>
       <Navbar/>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/skills' element={<Skills/>}/>
-        <Route path='/projects' element={<Projects projectList={projectList}/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-      
-      
-      </Routes>
+      <Home/>
+      <Skills/>
+      <Projects projectList={projectList}/>
+      <Contact/>
       </div>
     </div>
     
